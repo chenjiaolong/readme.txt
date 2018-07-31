@@ -1,0 +1,36 @@
+#demo1{
+    margin: 0%;
+     background-color: #DC143c;
+     height: 30px;
+}
+#demo2{
+    background-color: chartreuse;
+    text-align: center;
+    height: 100px;
+   margin: 0%;
+   padding: 0%;
+}
+.div1{
+    float: left;
+    margin: 35px;
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    border: 0ch;
+    background-color: gold;
+
+}
+#demo3{
+    float: left;
+    height: 500px;
+    width: 300px;
+    background-color: darkblue;
+}
+#demo4{
+    float: right;
+    height: 500px;
+    width: 1025px;
+    background-color:black;
+    color: darkgreen;
+    text-align: center;
+}
