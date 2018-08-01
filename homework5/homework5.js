@@ -1,12 +1,12 @@
 class File{
 
-    constructor(name,type,size,startTime,modTime,subFile){
+    constructor(name,type,size,startTime,modTime,arr=[]){
     this.name=name;
     this.type=type;
     this.size=size;
     this.startTime=startTime;
     this.modTime=modTime;
-    this.subFile=new Array();
+    this.subFile=arr;
     }
 
      list()
@@ -35,9 +35,18 @@ class File{
     }
 }
 console.log('*'.padEnd(80, '*'));
+ let [arr]=([
+   [ new  File("a1",1,1,63,68),
+    new File("a2",2,2,72,75),
+    new File  ("a3",1,1,1010,1011),
+     new File ("a4",2,2,1068,1071),
+      new File("a5",1,1,1006,1007)]
+  ]);
+  
+
 let [f1,f2]=[
-     new File("mobile",1,1,1000,1001),
-      new File("index . htm1" ,2,2,1002,1003) 
+      new File("mobile",1,1,1000,1001,arr),
+      new File("index . htm1" ,2,2,1002,1003,[]) 
     ];
   
     console.log(JSON.stringify(f1));
@@ -46,17 +55,19 @@ let [f1,f2]=[
     list功能
     mobile文件夹的子文件排序输出如下`);
     
-    let set=new Set([
-      new  File("a1",1,1,63,68),
-      new File("a2",2,2,72,75),
-      new File  ("a3",1,1,1010,1011),
-       new File ("a4",2,2,1068,1071),
-        new File("a5",1,1,1006,1007)
-    ]);
-    var n=0;
+  
+   /*  let set= new Set([
+   [ new  File("a1",1,1,63,68),
+    new File("a2",2,2,72,75),
+    new File  ("a3",1,1,1010,1011),
+     new File ("a4",2,2,1068,1071),
+      new File("a5",1,1,1006,1007)]
+  ]);
+   
+   var n=0;
     for (let item of set.keys()) {
         f1.subFile[n++]=item;
-      }
+      }  */
       f1.list();
  
 
